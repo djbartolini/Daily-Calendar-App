@@ -4,7 +4,8 @@
 var saveBtn = $('.saveBtn');
 var textboxEl = $('.description');
 var timeBlock = $('.time-block');
-var currentDate = dayjs().format('MMM D, YYYY')
+var today = $('#currentDay');
+var currentDate = dayjs().format('dddd, MMMM D, YYYY')
 var currentHour = dayjs().hour();
 
 
@@ -51,5 +52,7 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
+  today.text(currentDate);
+
 });
 
